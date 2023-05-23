@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class Member {
+    private String memberId;
+    private String name;
+    private String joinDate;
+    private double balance;
+
+    public Member(String memberId, String name, String joinDate, double balance) {
+        this.memberId = memberId;
+        this.name = name;
+        this.joinDate = joinDate;
+        this.balance = balance;
+    }
+
+    public String getMemberId() {
+        return memberId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getJoinDate() {
+        return joinDate;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+}
