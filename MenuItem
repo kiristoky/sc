@@ -1,0 +1,39 @@
+import java.util.HashSet;
+import java.util.Set;
+
+public class MenuItem {
+    private String itemId;
+    private String name;
+    private double price;
+    private String type;
+    private static Set<String> itemIds = new HashSet<>();
+
+    public MenuItem(String itemId, String name, double price, String type) {
+        if (itemIds.contains(itemId)) {
+            System.out.println("CREATE MENU FAILED: " + itemId + " IS EXISTS");
+            return;
+        }
+
+        this.itemId = itemId;
+        this.name = name;
+        this.price = price;
+        this.type = type;
+
+    }
+
+    public String getItemId() {
+        return itemId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public String getType() {
+        return type;
+    }
+}
